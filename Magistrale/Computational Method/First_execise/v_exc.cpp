@@ -19,13 +19,14 @@ public:
     }
   }
 };
-
+/*
 class Molecule: public Particle{
+  double u[3][3];
 
 public:
   void
-}
-
+};
+*/
 
 int main(){
   Particle <double> p;
