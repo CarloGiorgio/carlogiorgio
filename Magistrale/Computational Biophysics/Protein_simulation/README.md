@@ -1,5 +1,6 @@
 # Molecular Dynamics of a Lisozyme proteins
 This simulation is made using GROMACS. We follows the instruction on http://www.mdtutorials.com/gmx/lysozyme/
+
 The .mdp are necessary for the simulation.
 Those are the shell commands:
 
@@ -11,3 +12,5 @@ Those are the shell commands:
     gmx mdrun -v -deffnm em
     gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr
     gmx mdrun -v -deffnm nvt
+
+Be aware that the mdrun codes can lasts hours!
