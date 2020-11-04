@@ -1,8 +1,9 @@
 # Molecular Dynamics of a Lisozyme proteins
-This simulation is made using GROMACS. We follow the instruction on http://www.mdtutorials.com/gmx/lysozyme/
+This simulation is made using GROMACS. We will follow the instructions on http://www.mdtutorials.com/gmx/lysozyme/.
 
-The .mdp are necessary for the simulation.
-Those are the shell commands:
+The .mdp parameter files, available on the same website, are necessary for the simulation.
+We will briefly present the shell commands:
+## Initialization
 
     gmx pdb2gmx -f 1aki.pdb -o 1aki_processed.gro -water spce
 This command creates files that Gromacs can handle: a topology file, a positions restrained file and a post-processed structure file.
@@ -17,6 +18,7 @@ It adds solvate to the topology; spc216.gro is a good solvent configuration for 
     gmx genion -s ions.tpr -o 1AKI_solv_ions.gro -p topol.top -pname NA -nname CL -neutral
 
 This command neutralizes the charge using Na+ and Cl- ions (in this case 8 Cl- are needed).
+## Equilibration
 
     gmx grompp -f minim.mdp -c 1AKI_solv_ions.gro -p topol.top -o em.tpr
     gmx mdrun -v -deffnm em
@@ -39,13 +41,14 @@ Such MD runs require several minutes of execution.
 If you want to visualize the proteins or the system you can edit your .gro file into a .pdb using the editconf command:
 
     gmx ediconf -f 1AKI_solv_ions.gro -o 1AKI_solv_ions.pdb
+## Trajectory simulation and analysis
 
 Now we are ready for the MD simulation:
 
     gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr
     gmx mdrun -v -deffnm md
 
-This code makes the protein evolve for 1 ns. Be aware that it can lasts hours on your PC! Use "-v" tag to see the run progress.
+This code makes the protein evolve for 1 ns. Be aware that it can last hours on your PC! Use the verbose tag "-v" to have a real-time feedback about the progress.
 
     gmx trjconv -s md_0_1.tpr -f md_0_1.xtc -o md_0_1_noPBC.xtc -pbc mol -center
     gmx rms -s md_0_1.tpr -f md_0_1_noPBC.xtc -o rmsd.xvg -tu ns
