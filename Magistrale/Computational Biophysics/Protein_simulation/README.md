@@ -23,7 +23,8 @@ This command neutralize the charge using Na and CL
 This command create the microcanonical equilibrium for the system
 In this case, the output is a .tpr file and not a .gro!
 If you whant to know the output just use the following command:
-    
+
+    gmx energy -f em.edr -o potential.xvg
     
 More inforrmation about output and so on can be found on http://manual.gromacs.org/documentation/current/onlinehelp/gmx-energy.html.
     
