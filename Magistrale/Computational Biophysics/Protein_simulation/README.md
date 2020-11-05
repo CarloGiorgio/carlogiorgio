@@ -5,16 +5,17 @@ The .mdp parameter files, available on the same website, are necessary for the s
 We will briefly present the shell commands:
 ## Initialization
 
-    gmx pdb2gmx -f 1aki.pdb -o 1aki_processed.gro -water spce
+    gmx pdb2gmx -f 1aki.pdb -o 1AKI_processed.gro -water spce
 This command creates files that Gromacs can handle: a topology file, a positions restrained file and a post-processed structure file.
 We choose SPC/E model for water molecules.
 
-    gmx editconf -f 1aki_processed.gro -o 1aki_newbox.gro -c -d 1.0 -bt cubic
+    gmx editconf -f 1AKI_processed.gro -o 1AKI_newbox.gro -c -d 1.0 -bt cubic
 This inserts the molecule inside the correct geometry. We can choose among different ones.
 
-    gmx solvate -cp 1aki_newbox.gro -cs spc216.gro -o 1aki_solv.gro -p topol.top
+    gmx solvate -cp 1AKI_newbox.gro -cs spc216.gro -o 1AKI_solv.gro -p topol.top
 It adds solvate to the topology; spc216.gro is a good solvent configuration for our water model.
 
+    gmx grompp -f ions.mdp -c 1AKI_solv.gro -p topol.top -o ions.tpr
     gmx genion -s ions.tpr -o 1AKI_solv_ions.gro -p topol.top -pname NA -nname CL -neutral
 
 This command neutralizes the charge using Na+ and Cl- ions (in this case 8 Cl- are needed).
@@ -24,7 +25,6 @@ This command neutralizes the charge using Na+ and Cl- ions (in this case 8 Cl- a
     gmx mdrun -v -deffnm em
     
 This command creates the microcanonical equilibrium for the system by minimizing energy.
-In this case, the output is a .tpr file and not a .gro!
 If you want to know the output just use the following command:
 
     gmx energy -f em.edr -o potential.xvg
