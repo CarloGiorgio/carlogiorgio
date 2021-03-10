@@ -1,2 +1,2 @@
 # Magistrale
-This responsory contains the folders with programs of computational method of the first semester
+This responsory contains the folders with programs of courses during my master.
