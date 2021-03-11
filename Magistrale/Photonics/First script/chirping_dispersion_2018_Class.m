@@ -10,11 +10,13 @@ T0=80e-15;              %durata dell'impulso in s
 s0=T0/2.355*sqrt(2);    %conversion FWHM to sigma
 tp0=0;                  %posizione iniziale dell'impulso in s
 beta1=0/(3e8/1.52);   
-% zmax=50e-6;           %distanza massima all'interno del materiale dispersivo
+% zmax=50e-6;           %distanza massima all'interno
+                        %del materiale dispersivo
 beta2=1*2e-26;          %beta_2 for optical fiber
 % beta2=0*7.6e-26;      %beta_2 for optical silica
 % beta2=1*5.3e-26;      %beta_2 for CaF2
-zmax=0.15;              %distanza massima all'interno del materiale dispersivo 
+zmax=0.15;              %distanza massima all'interno 
+                        %del materiale dispersivo 
 % alpha=1*1/22000;    
 alpha=0*2;              % esagerated absortpion
 C=-1*-2;%-2;             %initial chirp 
@@ -35,11 +37,8 @@ f=zeros(size(t));       % creo vettore delle frequenze nullo da riempire
 dF=1/(2*T);
 for i=1:N/2
     f(i)=(i-1)*dF;
+    f(N/2+i)=-(N/2+i)*dF;
 end
-for i=(N/2+1):N
-    f(i)=(i-N-1)*dF;
-end
-
 
 Omega=2*pi*f;
 Dbeta=beta1*Omega+0.5*beta2*Omega.^2+1i*alpha*0.5;
@@ -47,6 +46,7 @@ propagator=exp(1i*Dbeta*dz);
 all_intensities=zeros(N,nsteps+1);
 zplot=zeros(1,nsteps+1);
 
+%field at position 0
 A=exp(-(1+1i*C).*((t-tp0).^2/(2*s0^2)));
 %figure,plot(t,real(A.*exp(-1i*1e14.*t)))
 % A=1.*exp(-(1+1i*C).*(abs(t-tp0)/(2*s0)));
