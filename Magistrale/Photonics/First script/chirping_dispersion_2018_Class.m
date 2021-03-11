@@ -66,7 +66,8 @@ if SaveVideo
     open(aviobj2)
 end
 
-sigma0=sqrt(sum(t.^2.*abs(A).^2)/sum(abs(A).^2)-(sum(t.*abs(A).^2)/sum(abs(A).^2))^2);
+sigma0=sqrt(sum(t.^2.*abs(A).^2)/sum(abs(A).^2)...
+    -(sum(t.*abs(A).^2)/sum(abs(A).^2))^2);
 Broadening(1)=1;
 
 for iz=1:nsteps
@@ -107,11 +108,13 @@ for iz=1:nsteps
     ylabel('Chirp')
     
     xlim([-T0, T0])
-    set(findall(gcf,'-property','FontSize'),'FontName','Times New Roman','FontSize',14)
+    set(findall(gcf,'-property','FontSize'),'FontName',...
+        'Times New Roman','FontSize',14)
     set(findobj(gcf,'type','line'),'LineWidth',2)
     pause(.1)
     drawnow
-    sigmas=sqrt(sum(t.^2.*abs(A).^2)/sum(abs(A).^2)-(sum(t.*abs(A).^2)/sum(abs(A).^2))^2);
+    sigmas=sqrt(sum(t.^2.*abs(A).^2)/sum(abs(A).^2)...
+        -(sum(t.*abs(A).^2)/sum(abs(A).^2))^2);
     
     if SaveVideo
         F=getframe(gcf);
@@ -141,7 +144,8 @@ if abs(beta2)>0
     xlabel('z/L_D')
     title (['\beta_2=', num2str(beta2) ' (SI)'])
     ylabel('Broadening Factor')
-    set(findall(gcf,'-property','FontSize'),'FontName','Times New Roman','FontSize',14)
+    set(findall(gcf,'-property','FontSize'),'FontName',...
+        'Times New Roman','FontSize',14)
     set(findobj(gcf,'type','line'),'LineWidth',2)
 end
 
@@ -158,7 +162,8 @@ end
 shading interp
 ylabel('t (ps)')
 box on
-set(findall(gcf,'-property','FontSize'),'FontName','Times New Roman','FontSize',14)
+set(findall(gcf,'-property','FontSize'),'FontName',...
+    'Times New Roman','FontSize',14)
 set(findobj(gcf,'type','line'),'LineWidth',2)
 
 
@@ -171,6 +176,7 @@ xlabel('t (ps)')
 ylabel('Intensity (AU)')
 legend(num2str(round(z'*1e2)/1e2))
 box on
-set(findall(gcf,'-property','FontSize'),'FontName','Times New Roman','FontSize',14)
+set(findall(gcf,'-property','FontSize'),'FontName',...
+    'Times New Roman','FontSize',14)
 set(findobj(gcf,'type','line'),'LineWidth',2)
 
