@@ -37,7 +37,7 @@ f=zeros(size(t));       % creo vettore delle frequenze nullo da riempire
 dF=1/(2*T);
 for i=1:N/2
     f(i)=(i-1)*dF;
-    f(N/2+i)=-(N/2+i)*dF;
+    f(N/2+i)=-(N/2-i+1)*dF;
 end
 
 Omega=2*pi*f;
