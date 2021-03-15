@@ -1,8 +1,8 @@
 # Photnics year 20/21
 | Table of Contents|
 |--------|
-|1. [First](#uno)|
-|2. [Second](#due)|
+|1.| [First](#uno)|
+|2.| [Second](#due)|
 <a name="due"></a>
 ## 1. First
 
