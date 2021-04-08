@@ -76,9 +76,6 @@ for iz=1:nsteps
     fase=unwrap(angle(A));
     chirp=-ifft(fft(fase).*1i.*Omega);
 
-        
-    
-    
     figure(1)
     subplot(4,1,1)
     plot(t,abs(A).^2);
