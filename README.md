@@ -16,29 +16,11 @@
 ### &#x1f4c8; GitHub Stats
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=carlogiorgio&show_icons=true&locale=en&layout=compact" alt="carlogiorgio" /></p>
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=carlogiorgio&show_icons=true&locale=en" alt="carlogiorgio" /></p>
-
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=carlogiorgio&" alt="carlogiorgio" /></p>
-
-[![Carlo's GitHub activity graph](https://activity-graph.herokuapp.com/graph?username=carlogiorgio&theme=xcode)](https://git.io/carlogiorgio) 
-
-### &#x1f4c8; GitHub Stats
-
-<a href="https://github.com/carlogiorgio/github-readme-stats">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=carlogiorgio&layout=compact&theme=radical" />
-</a>
+<p>&nbsp;<img align="right" src="https://github-readme-stats.vercel.app/api?username=carlogiorgio&show_icons=true&locale=en" alt="carlogiorgio" /></p>
 </br>
 </br>
-<!-- <a href="https://github.com/carlogiorgio/github-readme-stats">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=carlogiorgio&show_icons=true&theme=radical" />
-</a> -->
+</br>
+</br>
+<p><img align="right" src="https://github-readme-streak-stats.herokuapp.com/?user=carlogiorgio&layout=compact&theme=prussian" alt="carlogiorgio" /></p>
 
-   ![Carlo's GitHub stats](https://github-readme-stats.vercel.app/api/?username=carlogiorgio&theme=prussian&show_icons=true&count_private=true)
-   <br />
-   <br />
-   [![GitHub Streak](http://github-readme-streak-stats.herokuapp.com/?user=carlogiorgio&theme=prussian&hide_border=true)](https://git.io/streak-stats)
-   <br />
-   <br />
-<!--    ![Skyline](https://github.com/ShreyaPrasad1209/ShreyaPrasad1209/blob/master/github-metrics.svg) -->
-
-
+[![Carlo's GitHub activity graph](https://activity-graph.herokuapp.com/graph?username=carlogiorgio&theme=github)](https://git.io/carlogiorgio) 
