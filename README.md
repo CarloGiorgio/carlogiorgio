@@ -16,8 +16,8 @@
 ### &#x1f4c8; GitHub Stats
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=carlogiorgio&show_icons=true&locale=en&layout=compact" alt="carlogiorgio" /></p>
 
-<p>&nbsp;<img align="right" src="https://github-readme-stats.vercel.app/api?username=carlogiorgio&show_icons=true&locale=en" alt="carlogiorgio" /></p>
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=carlogiorgio&show_icons=true&locale=en" alt="carlogiorgio" /></p>
 
-<p><img align="right" src="https://github-readme-streak-stats.herokuapp.com/?user=carlogiorgio&layout=compact&theme=prussian" alt="carlogiorgio" /></p>
+<p><img align="left" src="https://github-readme-streak-stats.herokuapp.com/?user=carlogiorgio&layout=compact&theme=prussian" alt="carlogiorgio" /></p>
 
 [![Carlo's GitHub activity graph](https://activity-graph.herokuapp.com/graph?username=carlogiorgio&theme=github)](https://git.io/carlogiorgio) 
